@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "postinstall": "prisma generate",
     "dev": "next dev",
-    "build": "next build",
+    "build": "npx tsx prisma/seed.ts && next build",
     "start": "next start",
     "seed": "npx tsx prisma/seed.ts"
   },
