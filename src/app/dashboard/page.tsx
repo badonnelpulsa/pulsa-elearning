@@ -95,7 +95,7 @@ export default async function DashboardPage() {
       {/* Stats Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10">
         <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
-          <div className="text-3xl font-bold text-indigo-600">
+          <div className="text-3xl font-bold text-orange-500">
             {startedCourses.length}
           </div>
           <div className="text-sm text-gray-500 mt-1">Cours en cours</div>
@@ -130,7 +130,7 @@ export default async function DashboardPage() {
                 <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex-1 mr-4">
-                      <span className="text-xs font-medium text-indigo-600 bg-indigo-50 px-2 py-1 rounded-full">
+                      <span className="text-xs font-medium text-orange-600 bg-orange-50 px-2 py-1 rounded-full">
                         {course.category}
                       </span>
                       <h3 className="text-lg font-semibold text-gray-900 mt-2 line-clamp-2">
@@ -172,7 +172,7 @@ export default async function DashboardPage() {
             </p>
             <Link
               href="/parcours"
-              className="inline-flex items-center px-5 py-2.5 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition-colors"
+              className="inline-flex items-center px-5 py-2.5 bg-orange-500 text-white font-medium rounded-lg hover:bg-orange-600 transition-colors"
             >
               Découvrir les parcours
             </Link>
@@ -190,11 +190,11 @@ export default async function DashboardPage() {
             {certificates.map((cert) => (
               <div
                 key={cert.id}
-                className="bg-gradient-to-r from-indigo-50 to-blue-50 rounded-xl border border-indigo-100 p-6 flex items-center gap-4"
+                className="bg-gradient-to-r from-orange-50 to-amber-50 rounded-xl border border-orange-100 p-6 flex items-center gap-4"
               >
-                <div className="flex-shrink-0 w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center">
+                <div className="flex-shrink-0 w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
                   <svg
-                    className="w-6 h-6 text-indigo-600"
+                    className="w-6 h-6 text-orange-500"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -232,7 +232,7 @@ export default async function DashboardPage() {
                 key={ub.id}
                 className="bg-white rounded-xl border border-gray-100 shadow-sm p-4 flex flex-col items-center text-center"
               >
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-amber-400 to-yellow-500 flex items-center justify-center mb-2">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-orange-400 to-amber-500 flex items-center justify-center mb-2">
                   <span className="text-2xl">{ub.badge.icon}</span>
                 </div>
                 <span className="text-xs font-semibold text-gray-900">

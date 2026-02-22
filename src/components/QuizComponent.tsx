@@ -178,7 +178,7 @@ export default function QuizComponent({
           <div className="flex items-center justify-center gap-4">
             <button
               onClick={() => setShowExplanations(true)}
-              className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-medium transition-colors cursor-pointer"
+              className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-medium transition-colors cursor-pointer"
             >
               Voir les corrections
             </button>
@@ -226,7 +226,7 @@ export default function QuizComponent({
           </div>
           <button
             onClick={handleRetry}
-            className="text-sm font-medium text-indigo-600 hover:text-indigo-800 transition-colors cursor-pointer"
+            className="text-sm font-medium text-orange-500 hover:text-orange-700 transition-colors cursor-pointer"
           >
             Recommencer
           </button>
@@ -380,7 +380,7 @@ export default function QuizComponent({
         <div className="text-center pt-4">
           <button
             onClick={handleRetry}
-            className="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-lg font-medium transition-colors cursor-pointer"
+            className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-medium transition-colors cursor-pointer"
           >
             Recommencer le quiz
           </button>
@@ -396,7 +396,7 @@ export default function QuizComponent({
         {/* Progress bar */}
         <div className="bg-gray-100 h-2">
           <div
-            className="bg-indigo-600 h-2 transition-all duration-300 ease-out"
+            className="bg-orange-500 h-2 transition-all duration-300 ease-out"
             style={{
               width: `${((currentIndex + 1) / totalQuestions) * 100}%`,
             }}
@@ -416,9 +416,9 @@ export default function QuizComponent({
                   onClick={() => goToQuestion(index)}
                   className={`w-8 h-8 rounded-full text-xs font-semibold transition-all cursor-pointer ${
                     isCurrent
-                      ? "bg-indigo-600 text-white ring-2 ring-indigo-300 ring-offset-2"
+                      ? "bg-orange-500 text-white ring-2 ring-orange-300 ring-offset-2"
                       : isAnswered
-                      ? "bg-indigo-100 text-indigo-700 hover:bg-indigo-200"
+                      ? "bg-orange-100 text-orange-700 hover:bg-orange-200"
                       : "bg-gray-100 text-gray-400 hover:bg-gray-200"
                   }`}
                   aria-label={`Question ${index + 1}`}
@@ -453,14 +453,14 @@ export default function QuizComponent({
                   }
                   className={`w-full text-left flex items-center gap-4 px-5 py-4 rounded-xl border-2 transition-all cursor-pointer ${
                     isSelected
-                      ? "border-indigo-500 bg-indigo-50 text-indigo-900"
+                      ? "border-orange-500 bg-orange-50 text-gray-900"
                       : "border-gray-200 bg-white text-gray-700 hover:border-gray-300 hover:bg-gray-50"
                   }`}
                 >
                   <div
                     className={`flex-shrink-0 w-5 h-5 rounded-full border-2 flex items-center justify-center ${
                       isSelected
-                        ? "border-indigo-500 bg-indigo-500"
+                        ? "border-orange-500 bg-orange-500"
                         : "border-gray-300"
                     }`}
                   >
@@ -505,13 +505,13 @@ export default function QuizComponent({
                   d="M15.75 19.5L8.25 12l7.5-7.5"
                 />
               </svg>
-              Precedent
+              Précédent
             </button>
 
             {currentIndex < totalQuestions - 1 ? (
               <button
                 onClick={goToNext}
-                className="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2.5 rounded-lg text-sm font-medium transition-colors cursor-pointer"
+                className="flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-5 py-2.5 rounded-lg text-sm font-medium transition-colors cursor-pointer"
               >
                 Suivant
                 <svg
@@ -586,7 +586,7 @@ export default function QuizComponent({
           {/* Unanswered warning */}
           {currentIndex === totalQuestions - 1 && !allAnswered && (
             <p className="text-center text-sm text-amber-600 mt-4">
-              Veuillez repondre a toutes les questions avant de soumettre.
+              Veuillez répondre à toutes les questions avant de soumettre.
             </p>
           )}
         </div>

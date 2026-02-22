@@ -2,13 +2,13 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-300">
+    <footer className="bg-gray-950 text-gray-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}
           <div>
             <h3 className="text-white text-lg font-bold mb-3">
-              Pulsa E-Learning
+              <span className="text-orange-500">Pulsa</span> E-Learning
             </h3>
             <p className="text-gray-400 text-sm leading-relaxed">
               Votre plateforme d&apos;apprentissage en ligne pour progresser
@@ -25,7 +25,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/parcours"
-                  className="text-gray-400 hover:text-white text-sm transition-colors"
+                  className="text-gray-400 hover:text-orange-400 text-sm transition-colors"
                 >
                   Parcours
                 </Link>
@@ -33,7 +33,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/dashboard"
-                  className="text-gray-400 hover:text-white text-sm transition-colors"
+                  className="text-gray-400 hover:text-orange-400 text-sm transition-colors"
                 >
                   Dashboard
                 </Link>
@@ -50,7 +50,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/mentions-legales"
-                  className="text-gray-400 hover:text-white text-sm transition-colors"
+                  className="text-gray-400 hover:text-orange-400 text-sm transition-colors"
                 >
                   Mentions légales
                 </Link>
@@ -58,7 +58,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/contact"
-                  className="text-gray-400 hover:text-white text-sm transition-colors"
+                  className="text-gray-400 hover:text-orange-400 text-sm transition-colors"
                 >
                   Contact
                 </Link>
@@ -69,7 +69,7 @@ export default function Footer() {
 
         <div className="mt-8 pt-8 border-t border-gray-800 text-center">
           <p className="text-gray-500 text-sm">
-            &copy; 2024 Pulsa E-Learning. Tous droits réservés.
+            &copy; 2025 Pulsa E-Learning. Tous droits réservés.
           </p>
         </div>
       </div>

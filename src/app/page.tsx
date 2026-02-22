@@ -9,7 +9,7 @@ const features = [
       "Des formations complètes organisées en modules et leçons progressives pour un apprentissage efficace.",
     icon: (
       <svg
-        className="w-8 h-8 text-indigo-600"
+        className="w-8 h-8 text-orange-500"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -29,7 +29,7 @@ const features = [
       "Testez vos connaissances avec des quiz à la fin de chaque leçon et obtenez un feedback immédiat.",
     icon: (
       <svg
-        className="w-8 h-8 text-indigo-600"
+        className="w-8 h-8 text-orange-500"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -49,7 +49,7 @@ const features = [
       "Obtenez un certificat de réussite pour chaque parcours complété et valorisez vos compétences.",
     icon: (
       <svg
-        className="w-8 h-8 text-indigo-600"
+        className="w-8 h-8 text-orange-500"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -84,23 +84,23 @@ export default async function HomePage() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-indigo-900 via-indigo-800 to-blue-900 overflow-hidden">
+      <section className="relative bg-gray-950 overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-0 w-72 h-72 bg-white rounded-full -translate-x-1/2 -translate-y-1/2" />
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full translate-x-1/3 translate-y-1/3" />
-          <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-blue-400 rounded-full -translate-x-1/2 -translate-y-1/2" />
+          <div className="absolute top-0 left-0 w-72 h-72 bg-orange-500 rounded-full -translate-x-1/2 -translate-y-1/2" />
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-orange-400 rounded-full translate-x-1/3 translate-y-1/3" />
+          <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-orange-600 rounded-full -translate-x-1/2 -translate-y-1/2" />
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-40">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight">
               Formez-vous à l&apos;IA Générative{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-cyan-300">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-300">
                 pour l&apos;Industrie
               </span>
             </h1>
-            <p className="mt-6 text-lg sm:text-xl text-indigo-200 leading-relaxed max-w-2xl mx-auto">
+            <p className="mt-6 text-lg sm:text-xl text-gray-400 leading-relaxed max-w-2xl mx-auto">
               Découvrez nos parcours de formation en ligne conçus pour les
               professionnels. Maîtrisez les outils d&apos;intelligence artificielle
               générative et transformez votre activité.
@@ -108,7 +108,7 @@ export default async function HomePage() {
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
                 href="/inscription"
-                className="inline-flex items-center px-8 py-4 bg-white text-indigo-700 font-bold text-lg rounded-xl hover:bg-indigo-50 transition-all duration-200 shadow-lg hover:shadow-xl"
+                className="inline-flex items-center px-8 py-4 bg-orange-500 text-white font-bold text-lg rounded-xl hover:bg-orange-600 transition-all duration-200 shadow-lg hover:shadow-xl"
               >
                 Commencer gratuitement
                 <svg
@@ -127,7 +127,7 @@ export default async function HomePage() {
               </Link>
               <Link
                 href="/parcours"
-                className="inline-flex items-center px-8 py-4 border-2 border-indigo-300 text-white font-semibold text-lg rounded-xl hover:bg-indigo-700/50 transition-all duration-200"
+                className="inline-flex items-center px-8 py-4 border-2 border-gray-600 text-white font-semibold text-lg rounded-xl hover:bg-gray-800 transition-all duration-200"
               >
                 Voir les parcours
               </Link>
@@ -141,7 +141,7 @@ export default async function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
-              Pourquoi choisir Pulsa E-Learning ?
+              Pourquoi choisir <span className="text-orange-500">Pulsa</span> E-Learning ?
             </h2>
             <p className="mt-4 text-lg text-gray-500 max-w-2xl mx-auto">
               Une plateforme pensée pour un apprentissage efficace et engageant.
@@ -152,9 +152,9 @@ export default async function HomePage() {
             {features.map((feature) => (
               <div
                 key={feature.title}
-                className="relative bg-gray-50 rounded-2xl p-8 hover:bg-indigo-50 transition-colors duration-300 group"
+                className="relative bg-gray-50 rounded-2xl p-8 hover:bg-orange-50 transition-colors duration-300 group"
               >
-                <div className="w-14 h-14 bg-indigo-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-indigo-200 transition-colors duration-300">
+                <div className="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-orange-200 transition-colors duration-300">
                   {feature.icon}
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -236,7 +236,7 @@ export default async function HomePage() {
             <div className="text-center mt-12">
               <Link
                 href="/parcours"
-                className="inline-flex items-center px-6 py-3 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 transition-colors duration-200"
+                className="inline-flex items-center px-6 py-3 bg-orange-500 text-white font-semibold rounded-lg hover:bg-orange-600 transition-colors duration-200"
               >
                 Voir tous les parcours
                 <svg

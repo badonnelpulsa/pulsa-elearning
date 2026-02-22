@@ -127,7 +127,7 @@ export default function LessonViewer({
                         onClick={() => setSelectedLessonId(lesson.id)}
                         className={`w-full text-left px-4 py-3 flex items-center gap-3 text-sm transition-colors cursor-pointer ${
                           isActive
-                            ? "bg-indigo-50 text-indigo-700 font-medium"
+                            ? "bg-orange-50 text-orange-700 font-medium"
                             : "text-gray-600 hover:bg-gray-50"
                         }`}
                       >
@@ -136,7 +136,7 @@ export default function LessonViewer({
                             isDone
                               ? "bg-green-500 border-green-500"
                               : isActive
-                                ? "border-indigo-500"
+                                ? "border-orange-500"
                                 : "border-gray-300"
                           }`}
                         >
@@ -200,7 +200,7 @@ export default function LessonViewer({
             {/* Lesson header */}
             <div className="mb-6">
               {selectedModule && (
-                <p className="text-sm text-indigo-600 font-medium mb-1">
+                <p className="text-sm text-orange-500 font-medium mb-1">
                   Module {selectedModule.order}: {selectedModule.title}
                 </p>
               )}
@@ -302,7 +302,7 @@ export default function LessonViewer({
                 {nextLesson && (
                   <button
                     onClick={() => setSelectedLessonId(nextLesson.id)}
-                    className="flex items-center gap-2 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium rounded-lg transition-colors cursor-pointer"
+                    className="flex items-center gap-2 px-4 py-2 bg-orange-500 hover:bg-orange-600 text-white text-sm font-medium rounded-lg transition-colors cursor-pointer"
                   >
                     Suivant
                     <svg

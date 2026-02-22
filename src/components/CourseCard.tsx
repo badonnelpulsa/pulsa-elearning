@@ -47,7 +47,7 @@ export default function CourseCard({
     <Link href={`/parcours/${slug}`} className="block group">
       <div className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 group-hover:-translate-y-1">
         {/* Image / Placeholder */}
-        <div className="relative h-44 bg-gradient-to-br from-indigo-500 to-blue-600 overflow-hidden">
+        <div className="relative h-44 bg-gradient-to-br from-gray-900 to-gray-800 overflow-hidden">
           {imageUrl ? (
             <img
               src={imageUrl}
@@ -57,7 +57,7 @@ export default function CourseCard({
           ) : (
             <div className="flex items-center justify-center h-full">
               <svg
-                className="w-16 h-16 text-white/30"
+                className="w-16 h-16 text-orange-500/30"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -73,14 +73,14 @@ export default function CourseCard({
           )}
 
           {/* Category Badge */}
-          <span className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-indigo-700 text-xs font-semibold px-2.5 py-1 rounded-full">
+          <span className="absolute top-3 left-3 bg-orange-500 text-white text-xs font-semibold px-2.5 py-1 rounded-full">
             {category}
           </span>
         </div>
 
         {/* Content */}
         <div className="p-5">
-          <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">
+          <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-orange-500 transition-colors line-clamp-2">
             {title}
           </h3>
 

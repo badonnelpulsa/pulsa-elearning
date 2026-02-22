@@ -72,7 +72,7 @@ export default async function CoursDetailPage({ params }: PageProps) {
       {/* Course Header */}
       <div className="mb-10">
         <div className="flex items-center gap-3 mb-4">
-          <span className="text-xs font-medium text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full">
+          <span className="text-xs font-medium text-white bg-orange-500 px-3 py-1 rounded-full">
             {course.category}
           </span>
           <span className="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">

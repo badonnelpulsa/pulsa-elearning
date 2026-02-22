@@ -13,16 +13,16 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-indigo-700 shadow-lg sticky top-0 z-50">
+    <nav className="bg-gray-950 shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link
               href="/"
-              className="text-white text-xl font-bold tracking-tight hover:text-indigo-200 transition-colors"
+              className="text-white text-xl font-bold tracking-tight hover:text-orange-400 transition-colors"
             >
-              Pulsa E-Learning
+              <span className="text-orange-500">Pulsa</span> E-Learning
             </Link>
           </div>
 
@@ -30,29 +30,29 @@ export default function Navbar() {
           <div className="hidden md:flex md:items-center md:space-x-6">
             <Link
               href="/parcours"
-              className="text-indigo-100 hover:text-white hover:bg-indigo-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+              className="text-gray-300 hover:text-white hover:bg-gray-800 px-3 py-2 rounded-md text-sm font-medium transition-colors"
             >
               Parcours
             </Link>
             <Link
               href="/dashboard"
-              className="text-indigo-100 hover:text-white hover:bg-indigo-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+              className="text-gray-300 hover:text-white hover:bg-gray-800 px-3 py-2 rounded-md text-sm font-medium transition-colors"
             >
               Dashboard
             </Link>
 
             {/* Auth Buttons */}
-            <div className="flex items-center space-x-3 ml-4 pl-4 border-l border-indigo-500">
+            <div className="flex items-center space-x-3 ml-4 pl-4 border-l border-gray-700">
               {status === "loading" ? (
-                <div className="w-20 h-8 bg-indigo-600 rounded animate-pulse" />
+                <div className="w-20 h-8 bg-gray-800 rounded animate-pulse" />
               ) : session?.user ? (
                 <>
-                  <span className="text-indigo-100 text-sm font-medium">
+                  <span className="text-gray-300 text-sm font-medium">
                     {session.user.name || session.user.email}
                   </span>
                   <button
                     onClick={handleSignOut}
-                    className="bg-indigo-500 hover:bg-indigo-400 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors cursor-pointer"
+                    className="bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors cursor-pointer"
                   >
                     Déconnexion
                   </button>
@@ -60,14 +60,14 @@ export default function Navbar() {
               ) : (
                 <>
                   <Link
-                    href="/login"
-                    className="text-indigo-100 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                    href="/connexion"
+                    className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
                   >
                     Connexion
                   </Link>
                   <Link
-                    href="/register"
-                    className="bg-white text-indigo-700 hover:bg-indigo-50 px-4 py-2 rounded-md text-sm font-semibold transition-colors"
+                    href="/inscription"
+                    className="bg-orange-500 text-white hover:bg-orange-600 px-4 py-2 rounded-md text-sm font-semibold transition-colors"
                   >
                     Inscription
                   </Link>
@@ -80,7 +80,7 @@ export default function Navbar() {
           <div className="md:hidden">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="text-indigo-100 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-700 p-2 rounded-md cursor-pointer"
+              className="text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-950 p-2 rounded-md cursor-pointer"
               aria-label="Toggle menu"
               aria-expanded={mobileMenuOpen}
             >
@@ -120,29 +120,29 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-t border-indigo-600">
+        <div className="md:hidden border-t border-gray-800">
           <div className="px-4 py-3 space-y-2">
             <Link
               href="/parcours"
               onClick={() => setMobileMenuOpen(false)}
-              className="block text-indigo-100 hover:text-white hover:bg-indigo-600 px-3 py-2 rounded-md text-base font-medium transition-colors"
+              className="block text-gray-300 hover:text-white hover:bg-gray-800 px-3 py-2 rounded-md text-base font-medium transition-colors"
             >
               Parcours
             </Link>
             <Link
               href="/dashboard"
               onClick={() => setMobileMenuOpen(false)}
-              className="block text-indigo-100 hover:text-white hover:bg-indigo-600 px-3 py-2 rounded-md text-base font-medium transition-colors"
+              className="block text-gray-300 hover:text-white hover:bg-gray-800 px-3 py-2 rounded-md text-base font-medium transition-colors"
             >
               Dashboard
             </Link>
 
-            <div className="pt-3 mt-3 border-t border-indigo-600">
+            <div className="pt-3 mt-3 border-t border-gray-800">
               {status === "loading" ? (
-                <div className="w-full h-10 bg-indigo-600 rounded animate-pulse" />
+                <div className="w-full h-10 bg-gray-800 rounded animate-pulse" />
               ) : session?.user ? (
                 <div className="space-y-2">
-                  <p className="text-indigo-100 text-sm font-medium px-3">
+                  <p className="text-gray-300 text-sm font-medium px-3">
                     {session.user.name || session.user.email}
                   </p>
                   <button
@@ -150,7 +150,7 @@ export default function Navbar() {
                       setMobileMenuOpen(false);
                       handleSignOut();
                     }}
-                    className="w-full text-left bg-indigo-500 hover:bg-indigo-400 text-white px-3 py-2 rounded-md text-base font-medium transition-colors cursor-pointer"
+                    className="w-full text-left bg-gray-800 hover:bg-gray-700 text-white px-3 py-2 rounded-md text-base font-medium transition-colors cursor-pointer"
                   >
                     Déconnexion
                   </button>
@@ -158,16 +158,16 @@ export default function Navbar() {
               ) : (
                 <div className="space-y-2">
                   <Link
-                    href="/login"
+                    href="/connexion"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block text-indigo-100 hover:text-white hover:bg-indigo-600 px-3 py-2 rounded-md text-base font-medium transition-colors"
+                    className="block text-gray-300 hover:text-white hover:bg-gray-800 px-3 py-2 rounded-md text-base font-medium transition-colors"
                   >
                     Connexion
                   </Link>
                   <Link
-                    href="/register"
+                    href="/inscription"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block bg-white text-indigo-700 hover:bg-indigo-50 px-3 py-2 rounded-md text-base font-semibold text-center transition-colors"
+                    className="block bg-orange-500 text-white hover:bg-orange-600 px-3 py-2 rounded-md text-base font-semibold text-center transition-colors"
                   >
                     Inscription
                   </Link>
